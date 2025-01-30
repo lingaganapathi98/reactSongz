@@ -1,0 +1,190 @@
+/* .headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px 20 px;
+    margin-bottom: 30px;
+}
+
+.header {
+        display: flex;
+        grid-area: global-nav;
+        align-items: center;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        padding: auto;
+}
+
+.header-logo img{
+    flex-flow: row nowrap;
+    gap: 8px;
+    z-index: 1;
+    height: 50px;
+    width: 80%;
+}
+
+ 
+.header-search input {
+    max-width: 546px;
+    min-width: 350px;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-actions a {
+    padding: 10px;
+    text-decoration: none;
+
+}
+.login {
+    border: #999;
+    color: black;
+    align-items: end;
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login hover {
+    color: rgb(19, 201, 19);
+} 
+ 
+
+ 
+.header-logo img{
+    flex-flow: row nowrap;
+    gap: 8px;
+    z-index: 1;
+    height: 50px;
+    width: 80%;
+}
+    */
+/* Header.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #f4f4f4, #e9e9e9);
+  /* Subtle light gray gradient */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #dcdcdc; 
+}
+
+.header-logo a {
+  color: #0056b3;
+  /* eBay-inspired blue */
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-logo a:hover {
+  color: #ff4500;
+  /* Premium vibrant orange */
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.header-search input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.header-search input:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.search-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #0056b3, #004494);
+  /* Deep blue gradient */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background: linear-gradient(to right, #004494, #003377);
+  transform: translateY(-2px);
+}
+
+.header-action ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-action li {
+  display: flex;
+  align-items: center;
+}
+
+.action-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease-in-out;
+}
+
+.play-button {
+  background: linear-gradient(to right, #ff9900, #cc7a00);
+  /* Bright yellow-orange gradient */
+  color: white;
+}
+
+.play-button:hover {
+  background: linear-gradient(to right, #cc7a00, #b26900);
+  transform: translateY(-2px);
+}
+
+.signup-button {
+  background: linear-gradient(to right, #28a745, #218838);
+  /* Vibrant green gradient */
+  color: white;
+}
+
+.signup-button:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
+  transform: translateY(-2px);
+}
+
+.login-button {
+  background: linear-gradient(to right, #17a2b8, #138496);
+  /* Cool cyan gradient */
+  color: white;
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, #138496, #117a8b);
+  transform: translateY(-2px);
+}
