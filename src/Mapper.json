@@ -1,0 +1,70 @@
+{
+    "songs": [
+      {
+        "id": "1",
+        "title": "Hukkum",
+        "artist": "Anirudh",
+        "src": "https://download.dlweb.one/files/Tamil%20Mp3%20Songs/Jailer/Hukum%20-%20Thalaivar%20Alappara.mp3"
+      },
+      {
+        "id": "2",
+        "title": "Beast Mode",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/613/4d1f28153ea23338924c9507cb0ef1b2_160.mp4"
+      },
+      {
+        "id": "3",
+        "title": "Badass",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/415/f5a81c4cdedd162e03d5bd725183d370_160.mp4"
+      },
+      {
+        "id": "4",
+        "title": "Ordinary Person",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/916/38084e59336a125977e8f94b96e25bdf_160.mp4"
+      },
+      {
+        "id": "5",
+        "title": "Villain Yaaru",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/487/ca98fac0e1f9401865fb4ef1daccf97d_160.mp4"
+      },
+      {
+        "id": "6",
+        "title": "Ratata",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/036/326e8d22296a170594071806f0982623_160.mp4"
+      },
+      {
+        "id": "7",
+        "title": "I'm Scared",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/005/38fc89ed330a107bbfd85aec57a44135_160.mp4"
+      },
+      {
+        "id": "8",
+        "title": "Lokiverse-2.0",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/415/37c60aa27b569c5fb8d1ca651599b0ee_160.mp4"
+      },
+      {
+        "id": "9",
+        "title": "Rolex Theme",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/381/681cddded405ba2775954c32684306c2_160.mp4"
+      },
+      {
+        "id": "10",
+        "title": "Vikram OST",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/381/457fd38de019ad952681af9b997cfb2d_160.mp4"
+      },
+      {
+        "id": "11",
+        "title": "Pathikichu",
+        "artist": "Anirudh",
+        "src": "https://aac.saavncdn.com/776/5656f8ddf92d698fffd1436c53873f8b_160.mp4"
+      }
+    ]
+}

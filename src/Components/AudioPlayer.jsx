@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import songs from './Mapper.json';
+import React, { useState, useRef, useEffect } from "react";
+import songs from '../Mapper.json';
 import "../style/AudioPlayer.css";
 import playbutton from '../images/play-button.png';
 import pausebutton from '../images/pause-button.png';
@@ -9,16 +9,51 @@ import prevbutton from '../images/prev-button.png';
 import shufflebutton from '../images/shuffle-button.png';
 import loopbutton from '../images/loop-button.png';
 import { useSelector } from "react-redux";
+import * as XLSX from "xlsx";
 
-const songz = songs.songs;
+/* const songz = songs.songs; */
 
 const AudioPlayer = () => {
   const [currentSong, setCurrentSong] = useState(null);
   const audioRef = useRef(null);
+  const [songz, setSongz] = useState([]);
   const [audioStatus, changeAudioStatus] = useState(false);
   const [shuffle, setShuffle] = useState(false);
   const searchValue = useSelector((state) => state.searchValue);
   const [currentListofSongs, setCurrentListofSongs] = useState(songz.filter((song) => song.title.toLowerCase().includes(searchValue.toLowerCase())));
+
+  const fileUrl = "https://docs.google.com/spreadsheets/d/1PAw0exvR4mM7nafxuCqdmoIyBiXIlHlT/edit?usp=drivesdk&ouid=113324868507289636208&rtpof=true&sd=true"; // Replace with actual file ID
+
+  const fetchExcelFile = async () => {      
+      try {
+        const response = await fetch(fileUrl);
+        const blob = await response.blob();
+        const reader = new FileReader();
+        
+        reader.onload = (e) => {
+          const binaryStr = e.target.result;
+          const workbook = XLSX.read(binaryStr, { type: "binary" });
+          const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets[sheetName];
+          const parsedData = XLSX.utils.sheet_to_json(sheet);
+          // Transform data into required format
+          const formattedSongs = parsedData.filter((row) => row.A != null).map((row) => ({
+            id: String(row.__EMPTY),
+            title: row.A,
+            artist: row.B,
+            src: row.C,
+          }));
+        setSongz(formattedSongs);
+        };
+        reader.readAsBinaryString(blob);
+      } catch (error) {
+        console.error("Error fetching the Excel file:", error);
+      }      
+    };
+
+    useEffect(() => {
+      fetchExcelFile();
+    }, []);
 
   const playSong = (song) => {
     if (audioRef.current) {
@@ -64,7 +99,7 @@ const AudioPlayer = () => {
     }
     let listOfSongs = songz.filter((song) => song.title.toLowerCase().includes(searchValue.toLowerCase()));
     const currentIndex = listOfSongs.findIndex((song) => song.id === currentSong.id);
-    let prevIndex = currentIndex == 0 ? listOfSongs.length-1 : currentIndex - 1;
+    let prevIndex = currentIndex === 0 ? listOfSongs.length-1 : currentIndex - 1;
     setCurrentSong(listOfSongs[prevIndex]);
     setTimeout(() => {
       audioRef.current.play();
